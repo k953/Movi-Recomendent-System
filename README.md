@@ -148,6 +148,34 @@ movie_vecs_norm = movie_vecs / ||movie_vecs||
 
 Shape: `(num_movies, num_movies)`
 
+
+✅ 2) Calculate ALL movie-to-movie similarity
+similarity = cosine_similarity(movie_vecs_norm)
+
+
+Yaha:
+
+movie_vecs_norm = shape (N, 256)
+→ N movies, 256-d embeddings
+
+cosine_similarity(matrix) ka matlab:
+
+har movie vector ko baaki sab movies ke vectors se compare karo
+
+ek N × N similarity matrix banao
+
+Example:
+
+Agar 4800 movies hain:
+
+Output shape:
+
+(4800, 4800)
+
+
+
+
+
 ---
 
 ## ✅ Recommendation Function
