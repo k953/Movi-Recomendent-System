@@ -63,6 +63,54 @@ Dense(num_genres, sigmoid) → Genre Prediction
 ✅ The **movie embedding (256-dim)** is used for similarity  
 ✅ Sigmoid layer predicts multi-label genres  
 
+
+✅ Sigmoid layer kya predict karta hai?
+
+Sigmoid har genre ke liye ek probability (0 se 1 ke beech) predict karta hai.
+
+Matlab:
+
+Agar 20 genres hain,
+
+To sigmoid 20 numbers predict karega.
+
+Example output:
+
+[0.91, 0.83, 0.03, 0.12, 0.01, ..., 0.45]
+
+
+Yeh values probabilities hoti hain.
+
+✅ 1 movie → 20 sigmoid outputs (multi-label)
+
+Agar tumhare dataset me:
+
+✅ 20 genres hain
+✔ Action
+✔ Comedy
+✔ Sci-Fi
+✔ Drama
+... etc.
+
+To output layer:
+
+Dense(20, activation='sigmoid')
+
+
+Means har movie ke liye model output karta hai:
+
+Genre	Sigmoid Output
+Action	0.91
+Adventure	0.83
+Sci-Fi	0.76
+Drama	0.12
+Romance	0.01
+✅ Sigmoid kya batata hai?
+✅ 0.91 → 91% chance movie Action hai
+✅ 0.83 → 83% chance movie Adventure hai
+✅ 0.76 → 76% chance Sci-Fi hai
+
+
 ---
 
 ## ✅ Training
